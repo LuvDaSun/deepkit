@@ -9,6 +9,91 @@ export function getIn<
     T3 extends keyof TObject[T1][T2],
     T4 extends keyof TObject[T1][T2][T3],
     T5 extends keyof TObject[T1][T2][T3][T4],
+    T6 extends keyof TObject[T1][T2][T3][T4][T5],
+    T7 extends keyof TObject[T1][T2][T3][T4][T5][T6],
+    T8 extends keyof TObject[T1][T2][T3][T4][T5][T6][T7],
+    T9 extends keyof TObject[T1][T2][T3][T4][T5][T6][T7][T8],
+    T10 extends keyof TObject[T1][T2][T3][T4][T5][T6][T7][T8][T9],
+    TDefault = undefined,
+    >(
+        target: TObject,
+        path: [T1, T2, T3, T4, T5, T6, T7, T8, T9, T10],
+        defaultValue?: TDefault,
+): TObject[T1][T2][T3][T4][T5][T6][T7][T8][T9][T10] | TDefault;
+
+export function getIn<
+    TObject extends object,
+    T1 extends keyof TObject,
+    T2 extends keyof TObject[T1],
+    T3 extends keyof TObject[T1][T2],
+    T4 extends keyof TObject[T1][T2][T3],
+    T5 extends keyof TObject[T1][T2][T3][T4],
+    T6 extends keyof TObject[T1][T2][T3][T4][T5],
+    T7 extends keyof TObject[T1][T2][T3][T4][T5][T6],
+    T8 extends keyof TObject[T1][T2][T3][T4][T5][T6][T7],
+    T9 extends keyof TObject[T1][T2][T3][T4][T5][T6][T7][T8],
+    TDefault = undefined,
+    >(
+        target: TObject,
+        path: [T1, T2, T3, T4, T5, T6, T7, T8, T9],
+        defaultValue?: TDefault,
+): TObject[T1][T2][T3][T4][T5][T6][T7][T8][T9] | TDefault;
+
+export function getIn<
+    TObject extends object,
+    T1 extends keyof TObject,
+    T2 extends keyof TObject[T1],
+    T3 extends keyof TObject[T1][T2],
+    T4 extends keyof TObject[T1][T2][T3],
+    T5 extends keyof TObject[T1][T2][T3][T4],
+    T6 extends keyof TObject[T1][T2][T3][T4][T5],
+    T7 extends keyof TObject[T1][T2][T3][T4][T5][T6],
+    T8 extends keyof TObject[T1][T2][T3][T4][T5][T6][T7],
+    TDefault = undefined,
+    >(
+        target: TObject,
+        path: [T1, T2, T3, T4, T5, T6, T7, T8],
+        defaultValue?: TDefault,
+): TObject[T1][T2][T3][T4][T5][T6][T7][T8] | TDefault;
+
+export function getIn<
+    TObject extends object,
+    T1 extends keyof TObject,
+    T2 extends keyof TObject[T1],
+    T3 extends keyof TObject[T1][T2],
+    T4 extends keyof TObject[T1][T2][T3],
+    T5 extends keyof TObject[T1][T2][T3][T4],
+    T6 extends keyof TObject[T1][T2][T3][T4][T5],
+    T7 extends keyof TObject[T1][T2][T3][T4][T5][T6],
+    TDefault = undefined,
+    >(
+        target: TObject,
+        path: [T1, T2, T3, T4, T5, T6, T7],
+        defaultValue?: TDefault,
+): TObject[T1][T2][T3][T4][T5][T6][T7] | TDefault;
+
+export function getIn<
+    TObject extends object,
+    T1 extends keyof TObject,
+    T2 extends keyof TObject[T1],
+    T3 extends keyof TObject[T1][T2],
+    T4 extends keyof TObject[T1][T2][T3],
+    T5 extends keyof TObject[T1][T2][T3][T4],
+    T6 extends keyof TObject[T1][T2][T3][T4][T5],
+    TDefault = undefined,
+    >(
+        target: TObject,
+        path: [T1, T2, T3, T4, T5, T6],
+        defaultValue?: TDefault,
+): TObject[T1][T2][T3][T4][T5][T6] | TDefault;
+
+export function getIn<
+    TObject extends object,
+    T1 extends keyof TObject,
+    T2 extends keyof TObject[T1],
+    T3 extends keyof TObject[T1][T2],
+    T4 extends keyof TObject[T1][T2][T3],
+    T5 extends keyof TObject[T1][T2][T3][T4],
     TDefault = undefined,
     >(
         target: TObject,
@@ -91,6 +176,91 @@ export function getIn<
 }
 
 //#region overloads
+
+export function setIn<
+    TObject extends object,
+    T1 extends keyof TObject,
+    T2 extends keyof TObject[T1],
+    T3 extends keyof TObject[T1][T2],
+    T4 extends keyof TObject[T1][T2][T3],
+    T5 extends keyof TObject[T1][T2][T3][T4],
+    T6 extends keyof TObject[T1][T2][T3][T4][T5],
+    T7 extends keyof TObject[T1][T2][T3][T4][T5][T6],
+    T8 extends keyof TObject[T1][T2][T3][T4][T5][T6][T7],
+    T9 extends keyof TObject[T1][T2][T3][T4][T5][T6][T7][T8],
+    T10 extends keyof TObject[T1][T2][T3][T4][T5][T6][T7][T8][T9],
+    >(
+        target: TObject,
+        path: [T1, T2, T3, T4, T5, T6, T7, T8, T9, T10],
+        value: TObject[T1][T2][T3][T4][T5][T6][T7][T8][T9][T10] | undefined,
+        mutate?: boolean,
+): TObject;
+
+export function setIn<
+    TObject extends object,
+    T1 extends keyof TObject,
+    T2 extends keyof TObject[T1],
+    T3 extends keyof TObject[T1][T2],
+    T4 extends keyof TObject[T1][T2][T3],
+    T5 extends keyof TObject[T1][T2][T3][T4],
+    T6 extends keyof TObject[T1][T2][T3][T4][T5],
+    T7 extends keyof TObject[T1][T2][T3][T4][T5][T6],
+    T8 extends keyof TObject[T1][T2][T3][T4][T5][T6][T7],
+    T9 extends keyof TObject[T1][T2][T3][T4][T5][T6][T7][T8],
+    >(
+        target: TObject,
+        path: [T1, T2, T3, T4, T5, T6, T7, T8, T9],
+        value: TObject[T1][T2][T3][T4][T5][T6][T7][T8][T9] | undefined,
+        mutate?: boolean,
+): TObject;
+
+export function setIn<
+    TObject extends object,
+    T1 extends keyof TObject,
+    T2 extends keyof TObject[T1],
+    T3 extends keyof TObject[T1][T2],
+    T4 extends keyof TObject[T1][T2][T3],
+    T5 extends keyof TObject[T1][T2][T3][T4],
+    T6 extends keyof TObject[T1][T2][T3][T4][T5],
+    T7 extends keyof TObject[T1][T2][T3][T4][T5][T6],
+    T8 extends keyof TObject[T1][T2][T3][T4][T5][T6][T7],
+    >(
+        target: TObject,
+        path: [T1, T2, T3, T4, T5, T6, T7, T8],
+        value: TObject[T1][T2][T3][T4][T5][T6][T7][T8] | undefined,
+        mutate?: boolean,
+): TObject;
+
+export function setIn<
+    TObject extends object,
+    T1 extends keyof TObject,
+    T2 extends keyof TObject[T1],
+    T3 extends keyof TObject[T1][T2],
+    T4 extends keyof TObject[T1][T2][T3],
+    T5 extends keyof TObject[T1][T2][T3][T4],
+    T6 extends keyof TObject[T1][T2][T3][T4][T5],
+    T7 extends keyof TObject[T1][T2][T3][T4][T5][T6],
+    >(
+        target: TObject,
+        path: [T1, T2, T3, T4, T5, T6, T7],
+        value: TObject[T1][T2][T3][T4][T5][T6][T7] | undefined,
+        mutate?: boolean,
+): TObject;
+
+export function setIn<
+    TObject extends object,
+    T1 extends keyof TObject,
+    T2 extends keyof TObject[T1],
+    T3 extends keyof TObject[T1][T2],
+    T4 extends keyof TObject[T1][T2][T3],
+    T5 extends keyof TObject[T1][T2][T3][T4],
+    T6 extends keyof TObject[T1][T2][T3][T4][T5],
+    >(
+        target: TObject,
+        path: [T1, T2, T3, T4, T5, T6],
+        value: TObject[T1][T2][T3][T4][T5][T6] | undefined,
+        mutate?: boolean,
+): TObject;
 
 export function setIn<
     TObject extends object,

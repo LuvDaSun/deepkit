@@ -10,6 +10,81 @@ interface TransformGet<TObject> {
         T3 extends keyof TObject[T1][T2],
         T4 extends keyof TObject[T1][T2][T3],
         T5 extends keyof TObject[T1][T2][T3][T4],
+        T6 extends keyof TObject[T1][T2][T3][T4][T5],
+        T7 extends keyof TObject[T1][T2][T3][T4][T5][T6],
+        T8 extends keyof TObject[T1][T2][T3][T4][T5][T6][T7],
+        T9 extends keyof TObject[T1][T2][T3][T4][T5][T6][T7][T8],
+        T10 extends keyof TObject[T1][T2][T3][T4][T5][T6][T7][T8][T9],
+        TDefault = undefined,
+        >(
+        path: [T1, T2, T3, T4, T5, T6, T7, T8, T9, T10],
+        defaultValue?: TDefault,
+    ): TObject[T1][T2][T3][T4][T5][T6][T7][T8][T9][T10] | TDefault;
+
+    <
+        T1 extends keyof TObject,
+        T2 extends keyof TObject[T1],
+        T3 extends keyof TObject[T1][T2],
+        T4 extends keyof TObject[T1][T2][T3],
+        T5 extends keyof TObject[T1][T2][T3][T4],
+        T6 extends keyof TObject[T1][T2][T3][T4][T5],
+        T7 extends keyof TObject[T1][T2][T3][T4][T5][T6],
+        T8 extends keyof TObject[T1][T2][T3][T4][T5][T6][T7],
+        T9 extends keyof TObject[T1][T2][T3][T4][T5][T6][T7][T8],
+        TDefault = undefined,
+        >(
+        path: [T1, T2, T3, T4, T5, T6, T7, T8, T9],
+        defaultValue?: TDefault,
+    ): TObject[T1][T2][T3][T4][T5][T6][T7][T8][T9] | TDefault;
+
+    <
+        T1 extends keyof TObject,
+        T2 extends keyof TObject[T1],
+        T3 extends keyof TObject[T1][T2],
+        T4 extends keyof TObject[T1][T2][T3],
+        T5 extends keyof TObject[T1][T2][T3][T4],
+        T6 extends keyof TObject[T1][T2][T3][T4][T5],
+        T7 extends keyof TObject[T1][T2][T3][T4][T5][T6],
+        T8 extends keyof TObject[T1][T2][T3][T4][T5][T6][T7],
+        TDefault = undefined,
+        >(
+        path: [T1, T2, T3, T4, T5, T6, T7, T8],
+        defaultValue?: TDefault,
+    ): TObject[T1][T2][T3][T4][T5][T6][T7][T8] | TDefault;
+
+    <
+        T1 extends keyof TObject,
+        T2 extends keyof TObject[T1],
+        T3 extends keyof TObject[T1][T2],
+        T4 extends keyof TObject[T1][T2][T3],
+        T5 extends keyof TObject[T1][T2][T3][T4],
+        T6 extends keyof TObject[T1][T2][T3][T4][T5],
+        T7 extends keyof TObject[T1][T2][T3][T4][T5][T6],
+        TDefault = undefined,
+        >(
+        path: [T1, T2, T3, T4, T5, T6, T7],
+        defaultValue?: TDefault,
+    ): TObject[T1][T2][T3][T4][T5][T6][T7] | TDefault;
+
+    <
+        T1 extends keyof TObject,
+        T2 extends keyof TObject[T1],
+        T3 extends keyof TObject[T1][T2],
+        T4 extends keyof TObject[T1][T2][T3],
+        T5 extends keyof TObject[T1][T2][T3][T4],
+        T6 extends keyof TObject[T1][T2][T3][T4][T5],
+        TDefault = undefined,
+        >(
+        path: [T1, T2, T3, T4, T5, T6],
+        defaultValue?: TDefault,
+    ): TObject[T1][T2][T3][T4][T5][T6] | TDefault;
+
+    <
+        T1 extends keyof TObject,
+        T2 extends keyof TObject[T1],
+        T3 extends keyof TObject[T1][T2],
+        T4 extends keyof TObject[T1][T2][T3],
+        T5 extends keyof TObject[T1][T2][T3][T4],
         TDefault = undefined,
         >(
         path: [T1, T2, T3, T4, T5],
@@ -74,6 +149,76 @@ interface TransformGet<TObject> {
 interface TransformSet<TObject> {
 
     //#region overloads
+
+    <
+        T1 extends keyof TObject,
+        T2 extends keyof TObject[T1],
+        T3 extends keyof TObject[T1][T2],
+        T4 extends keyof TObject[T1][T2][T3],
+        T5 extends keyof TObject[T1][T2][T3][T4],
+        T6 extends keyof TObject[T1][T2][T3][T4][T5],
+        T7 extends keyof TObject[T1][T2][T3][T4][T5][T6],
+        T8 extends keyof TObject[T1][T2][T3][T4][T5][T6][T7],
+        T9 extends keyof TObject[T1][T2][T3][T4][T5][T6][T7][T8],
+        T10 extends keyof TObject[T1][T2][T3][T4][T5][T6][T7][T8][T9],
+        >(
+        path: [T1, T2, T3, T4, T5, T6, T7, T8, T9, T10],
+        value: TObject[T1][T2][T3][T4][T5][T6][T7][T8][T9][T10] | undefined,
+    ): void;
+
+    <
+        T1 extends keyof TObject,
+        T2 extends keyof TObject[T1],
+        T3 extends keyof TObject[T1][T2],
+        T4 extends keyof TObject[T1][T2][T3],
+        T5 extends keyof TObject[T1][T2][T3][T4],
+        T6 extends keyof TObject[T1][T2][T3][T4][T5],
+        T7 extends keyof TObject[T1][T2][T3][T4][T5][T6],
+        T8 extends keyof TObject[T1][T2][T3][T4][T5][T6][T7],
+        T9 extends keyof TObject[T1][T2][T3][T4][T5][T6][T7][T8],
+        >(
+        path: [T1, T2, T3, T4, T5, T6, T7, T8, T9],
+        value: TObject[T1][T2][T3][T4][T5][T6][T7][T8][T9] | undefined,
+    ): void;
+
+    <
+        T1 extends keyof TObject,
+        T2 extends keyof TObject[T1],
+        T3 extends keyof TObject[T1][T2],
+        T4 extends keyof TObject[T1][T2][T3],
+        T5 extends keyof TObject[T1][T2][T3][T4],
+        T6 extends keyof TObject[T1][T2][T3][T4][T5],
+        T7 extends keyof TObject[T1][T2][T3][T4][T5][T6],
+        T8 extends keyof TObject[T1][T2][T3][T4][T5][T6][T7],
+        >(
+        path: [T1, T2, T3, T4, T5, T6, T7, T8],
+        value: TObject[T1][T2][T3][T4][T5][T6][T7][T8] | undefined,
+    ): void;
+
+    <
+        T1 extends keyof TObject,
+        T2 extends keyof TObject[T1],
+        T3 extends keyof TObject[T1][T2],
+        T4 extends keyof TObject[T1][T2][T3],
+        T5 extends keyof TObject[T1][T2][T3][T4],
+        T6 extends keyof TObject[T1][T2][T3][T4][T5],
+        T7 extends keyof TObject[T1][T2][T3][T4][T5][T6],
+        >(
+        path: [T1, T2, T3, T4, T5, T6, T7],
+        value: TObject[T1][T2][T3][T4][T5][T6][T7] | undefined,
+    ): void;
+
+    <
+        T1 extends keyof TObject,
+        T2 extends keyof TObject[T1],
+        T3 extends keyof TObject[T1][T2],
+        T4 extends keyof TObject[T1][T2][T3],
+        T5 extends keyof TObject[T1][T2][T3][T4],
+        T6 extends keyof TObject[T1][T2][T3][T4][T5],
+        >(
+        path: [T1, T2, T3, T4, T5, T6],
+        value: TObject[T1][T2][T3][T4][T5][T6] | undefined,
+    ): void;
 
     <
         T1 extends keyof TObject,
